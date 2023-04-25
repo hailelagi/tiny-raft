@@ -1,18 +1,13 @@
 defmodule TinyRaft do
-  @moduledoc """
-  Documentation for `TinyRaft`.
-  """
+  @moduledoc false
 
-  @doc """
-  Hello world.
+  alias TinyRaft.NodeSupervisor
 
-  ## Examples
-
-      iex> TinyRaft.hello()
-      :world
-
-  """
-  def hello do
+  def build_cluster do
     :world
+  end
+
+  def join(name, config) do
+    DynamicSupervisor.start_child(__MODULE__, {NodeSupervisor, {name, config}})
   end
 end
