@@ -1,6 +1,7 @@
 # TinyRaft
 
-A [toy] tiny raft implementation in elixir. See: <https://raft.github.io/>
+A toy [raft](https://raft.github.io/) implementation in elixir.
+
 If running in production consider: <https://github.com/rabbitmq/ra>
 
 ## Installation
